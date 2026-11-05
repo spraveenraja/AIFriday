@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Executive application release recovery decision brief">
+  <title>Release Recovery | Executive Decision Brief</title>
+  <style>
+    :root{--navy:#102b3f;--navy2:#17445a;--teal:#087f8c;--cyan:#dff3f5;--ink:#172b3a;--muted:#637586;--line:#d9e2e8;--paper:#fff;--bg:#eef3f6;--green:#14836d;--greenbg:#e7f5ef;--amber:#a96b09;--amberbg:#fff4d8;--red:#b84141;--redbg:#fdeceb;--blue:#2e69a3;--bluebg:#e9f2fb;--shadow:0 12px 36px rgba(16,43,63,.08)}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.shell{max-width:1280px;margin:0 auto;padding:34px 30px 56px}.topline{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.brand{font-size:12px;font-weight:800;letter-spacing:.13em;color:var(--navy2);text-transform:uppercase}.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid #e3c774;background:var(--amberbg);color:#805713;padding:6px 11px;border-radius:999px;font-size:11px;font-weight:750;letter-spacing:.03em}.hero{background:linear-gradient(115deg,var(--navy),#1b5267);color:white;border-radius:18px;padding:34px 38px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-85px;top:-175px;box-shadow:0 0 0 34px rgba(255,255,255,.035),0 0 0 72px rgba(255,255,255,.025)}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#a8dbe0;margin:0 0 10px}.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.035em;line-height:1.08;font-size:clamp(30px,4vw,48px);max-width:780px;margin:0 0 12px}.hero p{max-width:760px;color:#d9e8ed;margin:0;font-size:15px}.hero-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:23px;color:#c2d5dc;font-size:12px}.hero-meta b{color:white}.section{margin-top:25px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:12px}.section-head h2{font-size:19px;letter-spacing:-.02em;margin:0;color:var(--navy)}.section-head p{margin:0;color:var(--muted);font-size:12px}.decision{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;background:var(--paper);border:1px solid #c9e5e7;border-left:5px solid var(--teal);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow)}.decision h2{margin:4px 0 5px;font-size:20px;color:var(--navy)}.decision p{margin:0;color:#526879;font-size:13px;max-width:820px}.decision .tag{align-self:start;background:var(--greenbg);color:#12694f;border:1px solid #b8e1d1;border-radius:7px;padding:8px 11px;font-size:11px;font-weight:800;white-space:nowrap}.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:15px}.kpi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:15px 16px;box-shadow:0 3px 14px rgba(16,43,63,.035)}.kpi .label{color:var(--muted);font-size:11px;font-weight:700}.kpi strong{display:block;color:var(--navy);font:600 27px/1.2 Georgia,"Times New Roman",serif;margin:6px 0}.kpi small{font-size:10px;color:var(--muted)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}.card{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:20px;box-shadow:0 3px 14px rgba(16,43,63,.035)}.card h3{margin:0 0 3px;color:var(--navy);font-size:15px}.card .sub{color:var(--muted);font-size:11px;margin:0 0 14px}.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{border-top:1px solid var(--line);padding-top:9px}.fact strong{display:block;color:var(--navy);font-size:15px}.fact span{font-size:11px;color:var(--muted)}.callout{margin-top:12px;padding:11px 13px;background:var(--bluebg);color:#315b7a;border-radius:8px;font-size:11px}.chart{width:100%;height:auto;display:block}.legend{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:10px;margin-top:7px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;background:white}table{width:100%;border-collapse:collapse;min-width:760px}th{text-align:left;background:#f5f8fa;color:#607485;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:11px 12px}td{padding:12px;border-top:1px solid #e9eef1;font-size:11px;vertical-align:top}td strong{color:var(--navy);font-size:12px}.badge{display:inline-block;border-radius:999px;padding:4px 8px;font-size:9px;font-weight:800;white-space:nowrap}.badge.recommended{background:var(--greenbg);color:#12694f}.badge.conditional{background:var(--amberbg);color:#805713}.badge.blocked{background:var(--redbg);color:#9b3131}.decision-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.gate-list{list-style:none;margin:10px 0 0;padding:0}.gate-list li{display:flex;gap:10px;padding:9px 0;border-top:1px solid #edf1f3;font-size:11px}.gate-state{flex:0 0 86px;font-weight:800;color:var(--amber)}.gate-list b{color:var(--navy)}.scenario-control{background:#f7fafb;border:1px dashed #b7c8d2;border-radius:10px;padding:14px;margin-top:12px;color:#536879;font-size:11px}.scenario-control strong{color:var(--navy)}.quote{font:italic 15px/1.65 Georgia,"Times New Roman",serif;color:#315064;border-left:3px solid var(--teal);padding-left:14px;margin:9px 0}.assumptions{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.assumption{background:#f5f8fa;border-radius:8px;padding:11px;font-size:10px;color:var(--muted)}.assumption b{display:block;color:var(--navy);font-size:12px;margin-bottom:3px}.foot{margin-top:28px;border-top:1px solid var(--line);padding-top:13px;color:#7c8d99;display:flex;justify-content:space-between;gap:16px;font-size:10px}.note{font-size:10px;color:var(--muted)}
+    @media(max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.grid2,.decision-grid{grid-template-columns:1fr}.assumptions{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.shell{padding:18px 13px 35px}.hero{padding:25px 21px}.topline{align-items:flex-start;flex-direction:column}.decision{grid-template-columns:1fr}.decision .tag{justify-self:start}.kpis{grid-template-columns:repeat(2,1fr)}.kpi strong{font-size:22px}.assumptions{grid-template-columns:1fr 1fr}.foot{flex-direction:column}}
+    @media print{body{background:white}.shell{max-width:none;padding:0}.hero,.card,.kpi,.decision{box-shadow:none;break-inside:avoid}.hero{print-color-adjust:exact;-webkit-print-color-adjust:exact}.section{break-inside:avoid}.table-wrap{overflow:visible}table{min-width:0}th{print-color-adjust:exact;-webkit-print-color-adjust:exact}.foot{margin-top:18px}}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <div class="topline"><div class="brand">Strategic account · release &amp; service recovery</div><div class="pill">● Synthetic decision case · estimates unvalidated</div></div>
+  <header class="hero">
+    <p class="eyebrow">Executive decision brief · scenario date 05 Nov 2026</p>
+    <h1>Recover the release.<br>Protect the service.</h1>
+    <p>A controlled recovery sequence for a delayed customer-facing release, with service safeguards and margin consequences visible before a customer date is promised.</p>
+    <div class="hero-meta"><span>Account: <b>Northstar Services (fictional)</b></span><span>Planned release: <b>08 Oct 2026</b></span><span>Delay: <b>28 days</b></span><span>Season date: <b>01 Dec 2026 · assumption</b></span></div>
+  </header>
+
+  <section class="section">
+    <div class="decision"><div><p class="eyebrow" style="color:var(--teal);margin-bottom:4px">Recommended path</p><h2>Stabilize operations, then release a verified thin slice</h2><p>Keep the 72-hour weekly support allocation intact. Resolve blockers in the proposed scope, verify the low-risk invoice-filter slice, and use a staged canary with rollback ready. Pause the blocked legacy migration and the dependent seasonal dashboard / bulk-upload scope.</p></div><div class="tag">CONDITIONAL · NOT APPROVED TO SHIP</div></div>
+    <div class="kpis">
+      <article class="kpi"><div class="label">On-time story completion</div><strong>61%</strong><small>11 of 18 planned stories</small></article>
+      <article class="kpi"><div class="label">Release progress</div><strong>78%</strong><small>14 of 18 complete · 4 open</small></article>
+      <article class="kpi"><div class="label">Release incidents</div><strong>18</strong><small>Prior 60 days · 2 unresolved</small></article>
+      <article class="kpi"><div class="label">Escaped high defects</div><strong>9</strong><small>8 outstanding · 6 blockers</small></article>
+      <article class="kpi"><div class="label">Actual vs planned margin</div><strong>14% / 20%</strong><small>6-point gap · case input</small></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>What leadership is deciding</h2><p>Approve a sequence and evidence gates, not an unproven ship date.</p></div>
+    <div class="grid2">
+      <article class="card">
+        <h3>Release progress: delivery is moving, but not predictably</h3><p class="sub">Synthetic work-item ledger · 18 planned stories</p>
+        <svg class="chart" viewBox="0 0 600 145" role="img" aria-label="14 of 18 work items complete, 11 on time, 3 late, 4 open">
+          <text x="4" y="20" fill="#637586" font-size="11">Completed on time</text><rect x="155" y="8" width="330" height="18" rx="6" fill="#edf1f3"/><rect x="155" y="8" width="202" height="18" rx="6" fill="#14836d"/><text x="500" y="22" fill="#172b3a" font-size="12" font-weight="700">11 / 18 · 61%</text>
+          <text x="4" y="58" fill="#637586" font-size="11">Completed late</text><rect x="155" y="46" width="330" height="18" rx="6" fill="#edf1f3"/><rect x="155" y="46" width="55" height="18" rx="6" fill="#e7a63b"/><text x="500" y="60" fill="#172b3a" font-size="12" font-weight="700">3</text>
+          <text x="4" y="96" fill="#637586" font-size="11">Still open</text><rect x="155" y="84" width="330" height="18" rx="6" fill="#edf1f3"/><rect x="155" y="84" width="73" height="18" rx="6" fill="#bd5a55"/><text x="500" y="98" fill="#172b3a" font-size="12" font-weight="700">4</text>
+          <text x="155" y="131" fill="#637586" font-size="10">14 of 18 complete = 78% total progress. The two percentages answer different questions.</text>
+        </svg>
+        <div class="callout"><b>Decision implication:</b> R15 “Low-risk invoice filters” is a candidate only after impact analysis confirms no dependency on an open blocker. R16 is blocked; R17 and R18 are paused pending dependency and quality evidence.</div>
+      </article>
+      <article class="card">
+        <h3>Live service: incidents and defects remain separate signals</h3><p class="sub">Incidents are customer-impacting events; defects are tracked causes or failure modes. They may be linked, so do not sum them.</p>
+        <svg class="chart" viewBox="0 0 600 150" role="img" aria-label="18 incidents: 2 severity one, 5 severity two, 11 severity three">
+          <text x="3" y="23" fill="#637586" font-size="11">Sev 1</text><rect x="85" y="10" width="350" height="18" rx="6" fill="#edf1f3"/><rect x="85" y="10" width="39" height="18" rx="6" fill="#b84141"/><text x="450" y="24" fill="#172b3a" font-size="12" font-weight="700">2</text>
+          <text x="3" y="61" fill="#637586" font-size="11">Sev 2</text><rect x="85" y="48" width="350" height="18" rx="6" fill="#edf1f3"/><rect x="85" y="48" width="97" height="18" rx="6" fill="#e7a63b"/><text x="450" y="62" fill="#172b3a" font-size="12" font-weight="700">5</text>
+          <text x="3" y="99" fill="#637586" font-size="11">Sev 3</text><rect x="85" y="86" width="350" height="18" rx="6" fill="#edf1f3"/><rect x="85" y="86" width="214" height="18" rx="6" fill="#5c91b7"/><text x="450" y="100" fill="#172b3a" font-size="12" font-weight="700">11</text>
+          <text x="85" y="132" fill="#637586" font-size="10">16 resolved · 1 monitoring · 1 open</text>
+        </svg>
+        <div class="callout" style="background:var(--redbg);color:#843a3a"><b>Defect gate:</b> 9 high-severity escaped defects found; 3 open, 3 in progress, 2 awaiting verification, 1 verified. Six remain marked as release blockers.</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Recovery choices and modeled trade-offs</h2><p>Illustrative ranges; no revenue uplift or service credits assumed.</p></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Scenario</th><th>Candidate window</th><th>Incremental spend</th><th>Modeled 90-day margin</th><th>Service / release posture</th><th>Decision status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Controlled thin slice</strong><br>Keep support allocation; fix in-scope blockers; stage a limited release.</td><td>3–4 weeks<br><span class="note">conditional range</span></td><td>$35k–$55k</td><td>10.3%–11.7%</td><td>Support floor preserved at baseline; lower scope, gated rollout.</td><td><span class="badge recommended">RECOMMENDED TO AUTHORIZE AS PILOT</span></td></tr>
+        <tr><td><strong>Full release freeze</strong><br>Stabilize broadly before any feature rollout.</td><td>5–7 weeks</td><td>$20k–$35k</td><td>11.7%–12.7%</td><td>Strongest short-term change restraint; seasonal value delayed.</td><td><span class="badge conditional">CONSIDER IF SERVICE WORSENS</span></td></tr>
+        <tr><td><strong>Accelerate with borrowed specialists</strong><br>Add temporary capacity while keeping gates.</td><td>2–3 weeks</td><td>$65k–$95k</td><td>7.7%–9.7%</td><td>Can protect support coverage; highest modeled spend.</td><td><span class="badge conditional">REQUIRES CFO / CAPACITY APPROVAL</span></td></tr>
+        <tr><td><strong>Ship all remaining scope</strong><br>Attempt a broad release immediately.</td><td>1–2 weeks technical attempt</td><td>$15k–$25k</td><td>12.3%–13.0%</td><td>Six blockers and missing readiness evidence make this infeasible.</td><td><span class="badge blocked">BLOCKED BY SAFEGUARDS</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="note" style="margin:8px 2px 0">Margin illustration assumes $500k monthly revenue, 14% current margin, $1.5m revenue over 90 days, and all one-time recovery spend expensed within that period. It excludes credits, revenue loss/gain, tax, and timing effects. Revenue and costs are synthetic assumptions, not case facts.</p>
+  </section>
+
+  <section class="section decision-grid">
+    <article class="card">
+      <h3>Customer commitment gate</h3><p class="sub">A forecast becomes a customer commitment only after evidence and named approval exist.</p>
+      <ul class="gate-list">
+        <li><span class="gate-state">PENDING</span><span><b>Defects:</b> no unresolved release-blocking high-severity item in the proposed scope.</span></li>
+        <li><span class="gate-state">PENDING</span><span><b>Quality:</b> critical regression evidence recorded against the frozen release candidate.</span></li>
+        <li><span class="gate-state">PENDING</span><span><b>Operations:</b> rollback, monitoring, on-call ownership, and support floor confirmed.</span></li>
+        <li><span class="gate-state">PENDING</span><span><b>Customer:</b> scope acceptance and account approver recorded.</span></li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Leadership decisions requested</h3><p class="sub">Authorize the next evidence-building step, not a date commitment.</p>
+      <div class="fact-grid">
+        <div class="fact"><strong>1 · Scope</strong><span>Approve R15 as a candidate; pause R16–R18 until blockers and dependencies are resolved.</span></div>
+        <div class="fact"><strong>2 · Capacity</strong><span>Protect 72 support hours/week; decide whether borrowed QA/specialist time is worth its margin cost.</span></div>
+        <div class="fact"><strong>3 · Spend</strong><span>Set a capped pilot envelope; Finance validates rates and recovery cost before commitment.</span></div>
+        <div class="fact"><strong>4 · Customer</strong><span>Approve a checkpoint update now; share a date only after the evidence gate passes.</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Safe customer update</h2><p>Use after account and service owners validate current status.</p></div>
+    <div class="card"><p class="quote">“We are completing a focused recovery review across the release scope and live-service issues. We will share the verified scope, readiness evidence, and next timing window at our agreed checkpoint. We will confirm a release date only after testing, operational readiness, and customer acceptance criteria are met.”</p><p class="note">Do not state that a defect is fixed, a date is confirmed, or a customer outcome is assured unless the responsible owner has verified that evidence.</p></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>Assumptions to validate</h2><p>Keep source facts distinct from editable simulator inputs.</p></div>
+    <div class="assumptions">
+      <div class="assumption"><b>Case facts</b>4-week delay; 61% on-time; 18 incidents/60d; 9 high-severity escaped defects; 14% actual / 20% plan; 3 shared engineers.</div>
+      <div class="assumption"><b>Capacity assumption</b>3 × 40 hours/week = 120; baseline 72 support / 48 release; 60 support hours is a proposed minimum floor.</div>
+      <div class="assumption"><b>Planning assumption</b>Scenario date 05 Nov 2026; planned release 08 Oct; season date 01 Dec. Candidate window is not a commitment.</div>
+      <div class="assumption"><b>Economics assumption</b>$500k monthly revenue and $35k–$95k recovery ranges are illustrative; Finance must validate before approval.</div>
+    </div>
+  </section>
+  <footer class="foot"><span>Northstar Services · fictional case · internal decision-support mockup</span><span>All synthetic estimates require owner validation · Human approval required</span></footer>
+</main>
+</body>
+</html>

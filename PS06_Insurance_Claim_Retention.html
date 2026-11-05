@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Insurance Claim Retention — Decision Brief</title>
+  <style>
+    :root { --navy:#102a43; --blue:#0b6bcb; --teal:#087f8c; --ink:#172b4d; --muted:#5b6877; --line:#dfe7ef; --paper:#ffffff; --wash:#f4f7fb; --green:#18794e; --amber:#a05a00; --red:#b42318; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#eef3f8; font:15px/1.55 Arial,Helvetica,sans-serif; }
+    .page { width:210mm; min-height:297mm; margin:12mm auto; padding:18mm 17mm 14mm; background:var(--paper); box-shadow:0 4px 18px rgba(16,42,67,.12); position:relative; page-break-after:always; }
+    .page:last-of-type { page-break-after:auto; }
+    header { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:3px solid var(--navy); padding-bottom:7mm; margin-bottom:8mm; }
+    .brand { color:var(--navy); font-size:12px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; }
+    .docno { color:var(--muted); font-size:11px; text-align:right; }
+    h1 { margin:0 0 3mm; font-size:30px; line-height:1.12; color:var(--navy); }
+    h2 { margin:0 0 4mm; font-size:21px; line-height:1.2; color:var(--navy); }
+    h3 { margin:5mm 0 2mm; font-size:15px; color:var(--navy); }
+    p { margin:0 0 3mm; }
+    ul,ol { margin:2mm 0 3mm; padding-left:5mm; }
+    li { margin-bottom:1.2mm; }
+    .eyebrow { color:var(--blue); font-size:11px; text-transform:uppercase; letter-spacing:.13em; font-weight:700; }
+    .lede { font-size:17px; line-height:1.45; color:#29445f; }
+    .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; margin:7mm 0; }
+    .metric { border-top:4px solid var(--blue); border-radius:4px; background:var(--wash); padding:4mm; min-height:38mm; }
+    .metric strong { display:block; font-size:25px; line-height:1.05; color:var(--navy); }
+    .metric span { display:block; margin-top:2mm; color:var(--muted); font-size:12px; }
+    .callout { border-left:4px solid var(--teal); background:#eef8f7; padding:4mm; margin:4mm 0; }
+    .decision { border:2px solid var(--navy); border-radius:5px; padding:5mm; background:#f8fbff; }
+    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:4mm; }
+    .card { border:1px solid var(--line); border-radius:5px; padding:4mm; background:#fff; }
+    .card h3 { margin-top:0; }
+    table { width:100%; border-collapse:collapse; margin:3mm 0 4mm; font-size:12px; }
+    th { background:var(--navy); color:white; text-align:left; padding:8px; }
+    td { border-bottom:1px solid var(--line); padding:8px; vertical-align:top; }
+    tr:nth-child(even) td { background:#fafcff; }
+    .small { font-size:11px; color:var(--muted); }
+    .tag { display:inline-block; border-radius:999px; padding:1px 7px; font-size:10px; font-weight:700; background:#e8f1fb; color:#214e7a; margin-right:4px; }
+    .yes { color:var(--green); font-weight:700; } .partly { color:var(--amber); font-weight:700; } .no { color:var(--red); font-weight:700; }
+    .flow { display:grid; grid-template-columns:repeat(5,1fr); gap:2mm; margin:4mm 0; }
+    .step { border-top:5px solid var(--blue); background:var(--wash); padding:3mm; font-size:11px; min-height:34mm; }
+    .step strong { display:block; margin-bottom:1mm; color:var(--navy); }
+    .scorebar { height:10px; background:#e5ebf2; border-radius:999px; overflow:hidden; margin-top:2mm; }
+    .scorebar i { display:block; height:100%; width:100%; background:var(--green); }
+    .foot { position:absolute; left:17mm; right:17mm; bottom:7mm; border-top:1px solid var(--line); padding-top:2mm; display:flex; justify-content:space-between; color:var(--muted); font-size:10px; }
+    .sectionno { color:#7e91a6; font-weight:700; float:right; }
+    .assumption { border:1px dashed var(--amber); background:#fffaf1; padding:3mm; font-size:12px; margin:3mm 0; }
+    @media print { body { background:#fff; } .page { margin:0; box-shadow:none; width:auto; min-height:auto; } }
+    @media(max-width:800px) { .page { width:auto; margin:0; padding:8mm; } .metrics,.grid2,.grid3,.flow { grid-template-columns:1fr; } }
+      /* Interactive section navigation */
+    body { background:#eef3f8; }
+    .interactive-shell { display:grid; grid-template-columns:260px minmax(0,1fr); min-height:100vh; }
+    .toc { position:sticky; top:0; height:100vh; overflow-y:auto; padding:28px 18px; background:#102a43; color:#fff; }
+    .toc h2 { color:#fff; font-size:17px; margin:0 0 6px; }
+    .toc .toc-subtitle { color:#c7d8e8; font-size:12px; margin:0 0 22px; }
+    .toc button { display:block; width:100%; border:0; border-radius:7px; padding:11px 12px; margin:4px 0; text-align:left; color:#dce8f2; background:transparent; cursor:pointer; font:inherit; line-height:1.35; }
+    .toc button:hover { background:#1b4264; color:#fff; }
+    .toc button[aria-current="page"] { background:#0b6bcb; color:#fff; font-weight:700; }
+    .content-area { min-width:0; padding:28px; }
+    .content-area .page { display:none; width:min(100%,1050px); min-height:0; margin:0 auto; padding:34px 40px 55px; box-shadow:0 4px 18px rgba(16,42,67,.12); page-break-after:auto; }
+    .content-area .page.is-active { display:block; }
+    .section-controls { width:min(100%,1050px); margin:0 auto 12px; display:flex; justify-content:space-between; align-items:center; gap:12px; color:#5b6877; font-size:13px; }
+    .section-controls button { border:1px solid #c8d4e0; border-radius:6px; background:white; padding:8px 12px; color:#102a43; cursor:pointer; font:inherit; }
+    .section-controls button:hover:not(:disabled) { background:#e8f1fb; }
+    .section-controls button:disabled { opacity:.45; cursor:default; }
+    @media(max-width:760px) { .interactive-shell { grid-template-columns:1fr; } .toc { position:relative; height:auto; padding:18px; } .toc nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3px; } .toc button { margin:0; } .content-area { padding:14px; } .content-area .page { padding:24px 18px 45px; } }
+    @media print { .interactive-shell { display:block; } .toc,.section-controls { display:none !important; } .content-area { padding:0; } .content-area .page,.content-area .page.is-active { display:block !important; width:auto; margin:0; padding:18mm 17mm 14mm; box-shadow:none; page-break-after:always; } }
+  </style>
+</head>
+<body>
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief<br>05 November 2026 · v1.0</div></header>
+  <div class="eyebrow">Executive summary · one-page decision</div>
+  <h1>AI-assisted claim recovery should be approved as a supervised retention service, not an autonomous decision system</h1>
+  <p class="lede"><strong>Recommendation:</strong> approve a controlled 90-day pilot that consolidates synthetic policy, claim, complaint and interaction records, explains the rules-based risk score, drafts authorized outreach, and requires licensed or supervisory review before customer-facing action.</p>
+
+  <div class="metrics">
+    <div class="metric"><strong>0–100</strong><span><b>Explainable baseline score.</b> High ≥60; Medium 35–59; Low ≤34. Source: frontend rules engine.</span></div>
+    <div class="metric"><strong>100% gate</strong><span><b>Pricing and coverage actions require human approval.</b> Explicit product requirement; not a measured business outcome.</span></div>
+    <div class="metric"><strong>5 tabs</strong><span><b>Shorter, role-based review flow.</b> Risk, recommendation, support, human review and audit trail.</span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="decision">
+      <h2>Decision requested</h2>
+      <p><strong>Approve:</strong> Product Owner and Compliance Manager sign off on pilot scope and communication guardrails by <strong>12 November 2026</strong>.</p>
+      <p><strong>Approve:</strong> Renewal Underwriter and Customer Advocacy owners validate rules and escalation criteria by <strong>20 November 2026</strong>.</p>
+      <p><strong>Authorize:</strong> a 90-day controlled pilot with synthetic/approved records only.</p>
+    </div>
+    <div>
+      <h2>Top risk reduced</h2>
+      <p><strong>Risk:</strong> an automated recommendation could change coverage, price, or claim expectations without authority.</p>
+      <div class="callout"><strong>Control:</strong> rules-grounded output, retrieved guideline citations, communication compliance checks, human review and immutable-style audit events before action.</div>
+    </div>
+  </div>
+
+  <h3>Why this can be acted on now</h3>
+  <p>The repository already provides a working Next.js workspace, a transparent rules engine, a FastAPI analysis service, SQLite review/audit persistence, and a service-recovery action model. The immediate gap is production governance—not the basic experience.</p>
+  <p class="small"><b>Evidence basis:</b> repository code reviewed at this date. All customer data in the supplied application is synthetic/demo data. No business uplift is claimed because no outcome data was supplied.</p>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>1</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">The answer first</div>
+  <h2>We recommend a staged pilot because faster implementation would increase governance risk <span class="sectionno">02</span></h2>
+  <p class="lede">Deploy the demonstrated experience in a controlled service workflow, validate each regulated recommendation against authority limits, then connect authoritative systems after owners sign off.</p>
+
+  <h3>Three options considered</h3>
+  <table>
+    <thead><tr><th>Option</th><th>Use case</th><th>Benefit</th><th>Trade-off / risk</th><th>Assessment</th></tr></thead>
+    <tbody>
+      <tr><td><b>A. Demonstration only</b></td><td>Retain the sample-data prototype</td><td>Fast, low integration cost, safe</td><td>No operational value or live service recovery</td><td><span class="tag">Reject</span> Undermines adoption</td></tr>
+      <tr><td><b>B. Rules-grounded pilot</b></td><td>Approved records + human review</td><td>Explainable, auditable, bounded scope</td><td>Needs integration and governance work</td><td><span class="tag">Recommend</span> Best balance</td></tr>
+      <tr><td><b>C. Full autonomous AI</b></td><td>Direct analysis and customer action</td><td>Potentially highest speed</td><td>High risk to price, coverage, claims and consent</td><td><span class="tag">Reject</span> Not appropriate now</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid2">
+    <div class="card"><h3>Why Option B is realistic</h3><ul><li>The code does not require an LLM key.</li><li>The deterministic engine produces the existing 0–100 baseline.</li><li>FastAPI and SQLite provide an operational API path.</li><li>The workflow separates recommendation from final decision.</li></ul></div>
+    <div class="card"><h3>What must remain blocked</h3><ul><li>No guaranteed outcomes or rates in outreach.</li><li>No direct pricing concession without approval.</li><li>No coverage change without customer agreement and authority.</li><li>No autonomous claim reopening or payment commitment.</li></ul></div>
+  </div>
+
+  <h3>Supporting storyline</h3>
+  <ol><li><b>Problem:</b> retention risk and service recovery signals are fragmented.</li><li><b>Evidence:</b> the rules engine, source records and guidelines are already linked in the workspace.</li><li><b>Recommendation:</b> pilot the bounded workflow and measure service quality before scaling.</li><li><b>Execution:</b> owner-led 30/60/90-day plan with explicit stop criteria.</li></ol>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">Problem understanding</div>
+  <h2>Retention teams lack a consolidated, traceable view before a renewal or service deadline <span class="sectionno">03</span></h2>
+
+  <div class="grid2">
+    <div class="card"><h3>Business problem</h3><p>Specialists must reconcile policy records, claims, complaints, interactions and guidelines across systems. This creates slower response, inconsistent follow-up and missed escalation risk.</p></div>
+    <div class="card"><h3>Root causes</h3><ul><li>Signals are stored across different sources.</li><li>Risk weights are not consistently visible.</li><li>Recommended action, approval and outreach are not one review workflow.</li><li>Audit context can be separated from the decision.</li></ul></div>
+  </div>
+
+  <h3>Six decision signals in the rules engine</h3>
+  <table>
+    <thead><tr><th>Signal</th><th>Illustrative code logic</th><th>Operational response</th></tr></thead>
+    <tbody>
+      <tr><td>Premium increase</td><td>30 points for &gt;15%, 18 for &gt;8%, 8 for &gt;4%</td><td>Explain change, review eligible options, gate concessions</td></tr>
+      <tr><td>Claim dissatisfaction</td><td>Up to 25 points; bad/slow claims increase points</td><td>Authorized status update or senior-claims route</td></tr>
+      <tr><td>Open complaint</td><td>20 points per unresolved complaint, capped</td><td>Assign owner and escalate before deadline</td></tr>
+      <tr><td>Negative interaction</td><td>5 points per negative event, capped at 15</td><td>Supervisor callback or personal check-in</td></tr>
+      <tr><td>Coverage fit</td><td>5 points per gap, capped at 10</td><td>Qualified coverage review; approval for change</td></tr>
+      <tr><td>Weak engagement</td><td>Digital, email, autopay and policy signals</td><td>Offer guided support and preferred-channel assistance</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Stakeholders and competing priorities</h3>
+  <table><thead><tr><th>Stakeholder</th><th>Priority</th><th>Required guardrail</th></tr></thead><tbody>
+    <tr><td>Customer</td><td>Clear explanation, fair treatment, prompt resolution</td><td>Plain language, consent, no guarantees, human escalation</td></tr>
+    <tr><td>Retention Specialist</td><td>Relevant, timely action</td><td>Recommendations are decision support, not authority</td></tr>
+    <tr><td>Claims / Customer Advocacy</td><td>Resolution and service-level compliance</td><td>Authorized claim/complaint owners and documented deadlines</td></tr>
+    <tr><td>Underwriter / Compliance</td><td>Price, coverage and regulatory control</td><td>Approval gates and rationale retention</td></tr>
+    <tr><td>Product / Technology</td><td>Reliable delivery, integration and observability</td><td>Baseline tests, source validation and auditability</td></tr>
+  </tbody></table>
+
+  <div class="assumption"><b>Illustrative/Assumption:</b> customer, guideline and service data in the repository are synthetic demo records. The document does not infer real performance, customer harm, savings or revenue impact.</div>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">Evidence and system credibility</div>
+  <h2>Repository evidence supports a supervised MVP; it does not yet prove production outcomes <span class="sectionno">04</span></h2>
+
+  <div class="flow">
+    <div class="step"><strong>1 · Consolidate</strong>Policy, claims, complaints, interactions, coverage and engagement records.</div>
+    <div class="step"><strong>2 · Score</strong>Rules engine calculates a risk level and retained-risk factors.</div>
+    <div class="step"><strong>3 · Retrieve</strong>Guideline excerpts are ranked from the sample knowledge base.</div>
+    <div class="step"><strong>4 · Recommend</strong>Five workflow tabs separate evidence, recommendation, support and decision.</div>
+    <div class="step"><strong>5 · Review</strong>Licensed review, rationale, approval/rejection and audit export.</div>
+  </div>
+
+  <h3>Code-backed controls</h3>
+  <table><thead><tr><th>Control</th><th>Evidence in repository</th><th>Status</th></tr></thead><tbody>
+    <tr><td>Risk score and levels</td><td><code>frontend/lib/risk.ts</code>: 0–100 score; thresholds High ≥60, Medium ≥35.</td><td><span class="yes">Implemented in demo</span></td></tr>
+    <tr><td>Guideline grounding</td><td><code>frontend/lib/data.ts</code>: retrieved guideline records such as RG-01, RG-04, RG-08 and RG-10.</td><td><span class="yes">Implemented in demo</span></td></tr>
+    <tr><td>Evaluation checks</td><td><code>backend/app/main.py</code>: retrieval, score consistency, approval, communication and driver checks.</td><td><span class="yes">Implemented in demo</span></td></tr>
+    <tr><td>Human decision</td><td><code>ReviewPanel</code>: approve/reject/reopen and reviewer rationale.</td><td><span class="yes">Implemented in demo</span></td></tr>
+    <tr><td>Audit persistence</td><td><code>reviews</code> and <code>audit_events</code> tables in SQLite.</td><td><span class="yes">Implemented in demo</span></td></tr>
+    <tr><td>Authorized source systems</td><td>README identifies sample data and calls for authoritative integrations in production.</td><td><span class="partly">Not yet implemented</span></td></tr>
+    <tr><td>Approved AI provider governance</td><td>Current model label is <code>rules-grounded-demo-v1</code>; no LLM key required.</td><td><span class="yes">No external AI dependency in demo</span></td></tr>
+  </tbody></table>
+
+  <div class="grid3">
+    <div class="card"><h3>Fact</h3><p>The backend returns an evaluation score and five default checks; sample outcomes can pass at 100% in the demo.</p></div>
+    <div class="card"><h3>Assumption</h3><p>The checklist is intended to govern a CxO-ready deliverable and may require final team confirmation.</p></div>
+    <div class="card"><h3>Missing evidence</h3><p>Baseline resolution time, retention rate, premium exposure, customer consent records and model error rates.</p></div>
+  </div>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>4</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">Recommendation and design</div>
+  <h2>Recommended flow keeps every customer-facing commitment under licensed human control <span class="sectionno">05</span></h2>
+
+  <div class="grid2">
+    <div>
+      <h3>AI may assist with</h3>
+      <ul>
+        <li>Premium-change explanation and eligible option review.</li>
+        <li>Claim delay, denial and missing-update summaries.</li>
+        <li>Complaint deadline, repeat-contact and escalation monitoring.</li>
+        <li>Negative-service follow-up and supervisor callback routing.</li>
+        <li>Coverage-fit review invitation and portal onboarding support.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>AI must not independently do</h3>
+      <ul>
+        <li>Promise claim reopening, payment or guaranteed savings.</li>
+        <li>Set a price or change coverage without authority.</li>
+        <li>Send outreach after customer opt-out or without consent.</li>
+        <li>Override underwriting, claims or regulatory requirements.</li>
+        <li>Record a decision without actor, rationale and timestamp.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Tabbed workspace matches the decision journey</h3>
+  <table><thead><tr><th>Tab</th><th>Primary purpose</th><th>User action</th><th>Control output</th></tr></thead><tbody>
+    <tr><td>Risk breakdown</td><td>Explain score and source evidence</td><td>Validate factors</td><td>0–100 baseline and factor evidence</td></tr>
+    <tr><td>AI recommendation</td><td>Show summary, drivers and actions</td><td>Review grounding</td><td>Guideline citations and evaluation</td></tr>
+    <tr><td>Support</td><td>Prepare mail and call support</td><td>Edit draft; preserve consent</td><td>Plain-language outreach and talking points</td></tr>
+    <tr><td>Human review</td><td>Approve or reject rationale</td><td>Sign off or reopen</td><td>Reviewer status and rationale</td></tr>
+    <tr><td>Audit trail</td><td>Trace system and human events</td><td>Export and inspect</td><td>Timestamp, actor, action and detail</td></tr>
+  </tbody></table>
+
+  <div class="callout"><strong>Approval model:</strong> pricing and coverage actions are the two highest-risk action types in the demo. Any credit above 5% and any coverage/claims exception follows licensed owner approval under RG-10 before communication or change.</div>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>5</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">Action plan and ownership</div>
+  <h2>A 90-day pilot should prove control, quality and operational adoption before scale <span class="sectionno">06</span></h2>
+
+  <table><thead><tr><th>Phase / date</th><th>Action</th><th>Accountable owner</th><th>Success measure and review date</th><th>Stop / continue gate</th></tr></thead><tbody>
+    <tr><td><b>0–30 days</b><br>12 Nov–11 Dec 2026</td><td>Confirm scope, rules, authority limits, consent and communication standards; replace demo sources with approved feeds only</td><td>Product Owner + Compliance Manager</td><td>Baseline: no production integration. Target: 100% scope and control sign-off. Review: 11 Dec.</td><td>Continue only if policy owners approve rules and data owners validate sources.</td></tr>
+    <tr><td><b>31–60 days</b><br>12 Dec 2026–10 Jan 2027</td><td>Run limited pilot, add role controls, instrument cycle time and exceptions, train reviewers</td><td>Operations Lead + Technology Lead</td><td>Baseline: existing workflow unknown. Target: ≥95% action grounding and 100% approval capture in pilot; review weekly.</td><td>Stop if sensitive data, consent or approval traceability fails.</td></tr>
+    <tr><td><b>61–90 days</b><br>11 Jan–11 Feb 2027</td><td>Evaluate service and review outcomes; decide expand, revise or stop</td><td>Executive Sponsor + Risk Committee</td><td>Baseline: none supplied. Target set from pilot baseline and approved benefit case. Review: 11 Feb.</td><td>Expand only with evidence for quality, control and customer outcomes.</td></tr>
+  </tbody></table>
+
+  <h3>Operating checkpoints</h3>
+  <div class="grid3">
+    <div class="card"><h3>Weekly control review</h3><p><b>Owner:</b> Compliance Manager<br>Checks rejected recommendations, missing approval, communication exceptions and audit gaps.</p></div>
+    <div class="card"><h3>Biweekly service review</h3><p><b>Owner:</b> Operations Lead<br>Checks speed, claim/complaint escalation, reviewer burden and draft quality.</p></div>
+    <div class="card"><h3>Day-90 scale decision</h3><p><b>Owner:</b> Executive Sponsor<br>Continue, revise or stop based on approved evidence and residual risk.</p></div>
+  </div>
+
+  <h3>Proposed pilot measures</h3>
+  <table><thead><tr><th>Measure</th><th>Illustrative baseline</th><th>Illustrative target</th><th>Review date</th></tr></thead><tbody>
+    <tr><td>Grounded actions</td><td>Not yet measured</td><td>≥95%</td><td>Weekly</td></tr>
+    <tr><td>Pricing/coverage actions approved</td><td>Not yet measured</td><td>100%</td><td>Weekly</td></tr>
+    <tr><td>Reviewer override or rejection</td><td>Not yet measured</td><td>Tracked, with reason</td><td>Weekly</td></tr>
+    <tr><td>Complaint/claim follow-up completed</td><td>Not yet measured</td><td>Policy owner SLA met</td><td>Biweekly</td></tr>
+    <tr><td>Customer outcome / retention</td><td>Not yet measured</td><td>Target after baseline study</td><td>Day 90</td></tr>
+  </tbody></table>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>6</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">Risk register</div>
+  <h2>Residual risks remain manageable only if authority and source controls are enforced <span class="sectionno">07</span></h2>
+
+  <table><thead><tr><th>Risk</th><th>Impact</th><th>Likelihood</th><th>Response plan</th><th>Owner / trigger</th></tr></thead><tbody>
+    <tr><td>Unauthorized price or coverage advice</td><td><b>High</b></td><td>Medium</td><td>Approval gate; licensed reviewer; disable regulated actions if reviewer unavailable</td><td>Underwriter / any unapproved action</td></tr>
+    <tr><td>Outdated or wrong policy/claim data</td><td><b>High</b></td><td>Medium</td><td>Source validation, freshness checks, customer-facing draft label, record IDs</td><td>Data Owner / stale feed or source mismatch</td></tr>
+    <tr><td>AI or rules output overstates certainty</td><td>High</td><td>Medium</td><td>Show confidence and rules basis; avoid guarantees; reviewer rationale</td><td>Model/Rules Owner / unsupported assertion</td></tr>
+    <tr><td>Customer consent or opt-out not respected</td><td><b>High</b></td><td>Low–Medium</td><td>Prefer approved channel, suppress communication, consent audit check</td><td>Compliance / opt-out record missing</td></tr>
+    <tr><td>Reviewer ignores automation warning</td><td>Medium</td><td>Medium</td><td>Required rationale, exception review, periodic QA sampling</td><td>Operations Lead / override trend</td></tr>
+    <tr><td>Audit records incomplete</td><td>Medium–High</td><td>Low–Medium</td><td>Persist actor/action/detail; reconcile periodic exports</td><td>Technology Lead / write failure</td></tr>
+  </tbody></table>
+
+  <h3>Final 5-question CxO test</h3>
+  <ol>
+    <li><b>Could a CxO decide in 60 seconds?</b> <span class="yes">Yes</span> — recommendation and approval request appear on page 1.</li>
+    <li><b>Would a skeptical reviewer trust every number?</b> <span class="yes">Yes</span> — repository numbers have code sources; proposed outcomes are explicitly not measured.</li>
+    <li><b>Is who does what by when obvious?</b> <span class="yes">Yes</span> — the action plan has owners and review dates.</li>
+    <li><b>Could anything be removed?</b> <span class="yes">Yes, no repetition was included</span>; code facts and assumptions remain separated.</li>
+    <li><b>Would the team present this to the CEO?</b> <span class="yes">Subject to policy-owner sign-off and approved-source validation</span>.</li>
+  </ol>
+
+  <div class="callout"><strong>Publication gate:</strong> confirm owners, actual dates, organizational AI-tool approval, source-system access, customer-consent controls and pilot performance targets before operational use.</div>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>7</span></div>
+</section>
+
+<section class="page">
+  <header><div class="brand">Insurance Claim Retention</div><div class="docno">Decision Brief · v1.0</div></header>
+  <div class="eyebrow">Responsible AI and quality review</div>
+  <h2>The deliverable separates implementation evidence, assumptions and governance confirmations <span class="sectionno">08</span></h2>
+
+  <h3>AI-assisted deliverable trace</h3>
+  <table><thead><tr><th>Stage</th><th>Prompt intent / output</th><th>Human review</th></tr></thead><tbody>
+    <tr><td>First prompt</td><td>Read the repository and checklist; create an HTML business decision brief named <code>Insurance_claimretention.html</code>.</td><td>Scope checked against supplied files.</td></tr>
+    <tr><td>Refinement</td><td>Separate source facts, illustrative demo data, assumptions and implementation gaps. Structure around executive summary, problem, options, recommendation, plan, risks and checklist.</td><td>Claims, premiums, action owners and risk controls checked against code.</td></tr>
+    <tr><td>Quality check</td><td>Verify figures and calculations; remove fabricated customer impact; include owner, date and review date for proposed actions.</td><td>Code references retained; no production outcome claimed.</td></tr>
+  </tbody></table>
+
+  <h3>Deliverable Quality Checklist — self-review</h3>
+  <table><thead><tr><th>Section</th><th>Score basis</th><th>Status</th></tr></thead><tbody>
+    <tr><td>1 · Executive Summary</td><td>Decision, six implementation facts/controls, top risk and approval ask are on page 1</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>2 · Storyline & Structure</td><td>Answer, evidence, recommendation and execution follow a logical sequence</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>3 · Problem Understanding</td><td>Business problem, root causes, stakeholders and assumptions are separated</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>4 · Evidence & Credibility</td><td>All repository-backed claims identify files; unsupported measures are labelled not measured</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>5 · Recommendation & Options</td><td>Three options, justification, benefits, trade-offs and dependencies</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>6 · Action Plan & Ownership</td><td>30/60/90-day phases, accountable owners, dates, measures and stop gates</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>7 · Clarity & Visual Quality</td><td>Print-ready HTML, tables and flows, consistent layout, file name and page numbers</td><td><span class="yes">Yes</span></td></tr>
+    <tr><td>8 · AI Usage & Responsible Practice</td><td>Prompt stages, human review and synthetic-data notice are documented</td><td><span class="partly">Partly — approved tool list and team participation require organizational confirmation</span></td></tr>
+  </tbody></table>
+
+  <div class="grid2">
+    <div class="card"><h3>Open confirmation items</h3><ul><li>Approved AI tool/provider list</li><li>Named deliverable reviewer</li><li>Team participation record</li><li>Executive owners and exact approval dates</li><li>Production source-system and consent controls</li></ul></div>
+    <div class="card"><h3>Responsible-practice result</h3><p>No confidential or real customer data is included. The application data is identified as synthetic/demo. The document does not claim unverified financial, retention or operational impact.</p></div>
+  </div>
+
+  <h3>Source inventory</h3>
+  <p class="small"><code>README.md</code> · <code>frontend/lib/risk.ts</code> · <code>frontend/lib/data.ts</code> · <code>frontend/components/copilot/copilot-app.tsx</code> · <code>backend/app/main.py</code> · <code>Deliverable_Quality_Checklist.md</code></p>
+  <div class="foot"><span>Insurance_claimretention.html</span><span>8</span></div>
+</section>
+<script>
+(() => {
+  const sections = [...document.querySelectorAll('body > section.page')];
+  if (!sections.length) return;
+  const labels = [
+    'Executive Summary',
+    'Recommendation & Options',
+    'Problem & Root Causes',
+    'Proposed Solution',
+    'Pilot Plan',
+    'Success Measures',
+    'Risk Register',
+    'Responsible AI & Quality Review'
+  ].slice(0, sections.length);
+  const shell = document.createElement('div');
+  shell.className = 'interactive-shell';
+  const sidebar = document.createElement('aside');
+  sidebar.className = 'toc';
+  sidebar.innerHTML = '<h2>Insurance Claim Retention</h2><p class="toc-subtitle">Decision brief · select a section</p><nav aria-label="Table of contents"></nav>';
+  const nav = sidebar.querySelector('nav');
+  const area = document.createElement('main');
+  area.className = 'content-area';
+  area.setAttribute('id', 'main-content');
+  const controls = document.createElement('div');
+  controls.className = 'section-controls';
+  controls.innerHTML = '<button type="button" data-step="-1">← Previous</button><span aria-live="polite"></span><button type="button" data-step="1">Next →</button>';
+  area.append(controls);
+  document.body.insertBefore(shell, sections[0]);
+  shell.append(sidebar, area);
+  sections.forEach((section, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = `${String(index + 1).padStart(2, '0')}  ${labels[index]}`;
+    button.addEventListener('click', () => show(index));
+    nav.append(button);
+    section.dataset.sectionIndex = index;
+    area.append(section);
+  });
+  const prev = controls.querySelector('[data-step="-1"]');
+  const next = controls.querySelector('[data-step="1"]');
+  function show(index, updateHash = true) {
+    const current = Math.max(0, Math.min(sections.length - 1, index));
+    sections.forEach((section, i) => {
+      const active = i === current;
+      section.classList.toggle('is-active', active);
+      section.setAttribute('aria-hidden', String(!active));
+      nav.children[i].setAttribute('aria-current', active ? 'page' : 'false');
+    });
+    controls.querySelector('[aria-live]').textContent = `Section ${current + 1} of ${sections.length}`;
+    prev.disabled = current === 0;
+    next.disabled = current === sections.length - 1;
+    if (updateHash) history.replaceState(null, '', `#section-${current + 1}`);
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  controls.addEventListener('click', event => {
+    const step = event.target.closest('[data-step]');
+    if (step) show(Number(sections.find(section => section.classList.contains('is-active')).dataset.sectionIndex) + Number(step.dataset.step));
+  });
+  const hashIndex = Number(location.hash.match(/section-(\d+)/)?.[1]) - 1;
+  show(Number.isInteger(hashIndex) && hashIndex >= 0 ? hashIndex : 0, false);
+})();
+</script>
+</body>
+</html>
+
+
+

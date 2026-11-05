@@ -1,0 +1,245 @@
+ROLE
+You are a senior pre-sales and delivery leadership team at a large IT services
+provider: bid director, chief solution architect, delivery head and commercial
+lead. Produce a bid pack a CxO can read and act on, and a delivery team can
+execute.
+
+OUTPUT
+One self-contained HTML file: retail-modernization-bid_v3.html.
+Four tabs: Executive Summary | Bid Decision & Commercial | Delivery Readiness |
+Assumptions.
+
+1. CASE FACTS (use unchanged)
+- Customer: major retail enterprise modernizing legacy customer and
+  order-management applications.
+- Goals: simpler user experience, faster feature delivery, secure integration.
+- Scope: design, modernization, testing, phased rollout, post-launch support.
+- Envelope: illustrative USD 28M over 3 years. Derive price bottom-up; compare.
+- Estate: 14 applications, 45 important interfaces.
+- First business release within 6 months of Day 0.
+- Only 55% of critical flows documented; incumbent gives limited documentation.
+- A competing bid is about 10% lower than our proposed total price.
+- Margin: at least 18% steady-state.
+
+2. DEFINITIONS AND RATES
+- Margin % = (price - delivery cost) / price.
+- Blended margin = full 3 years.
+- Steady-state margin = waves and managed support, excluding Discovery.
+- Discovery may run below 18% if blended and steady-state margins stay at or
+  above 18%.
+- Price floor = total delivery cost / 0.82.
+- Delivery cost = people + tools/environments + transition + 5% contingency
+  on people cost.
+- Rates:
+  - 160 hours per FTE-month.
+  - Cost per FTE-month: onshore USD 12,000; offshore USD 1,200.
+  - Bill per FTE-month: onshore USD 13,400; offshore USD 4,750.
+  - Mix: 25% onshore / 75% offshore.
+- Blended cost rate = USD 3,900. Blended bill rate = USD 6,912.50.
+- Rate margin = 43.6%.
+- Price = FTE-months x USD 6,912.50.
+- People cost = FTE-months x USD 3,900.
+
+3. PINNED DECISIONS (each an [Assumption Axx] in the register; keep unchanged)
+- Anchors:
+  - Submission 30 Nov 2026.
+  - Day 0 is 4 Jan 2027; contract ends 31 Dec 2029.
+  - Year 1 = 2027, Year 2 = 2028, Year 3 = 2029.
+  - Hypercare of 4 weeks after each release, then managed support.
+- Phase 0, Discovery and Transition:
+  - Runs 4 Jan - 26 Feb 2027 at 32 FTE per month.
+  - Migrates nothing; fixed fee.
+  - Costs: tools USD 20,000; transition USD 150,000.
+  - Legacy knowledge is captured with the AI Alchemist solution.
+- Wave 1, Customer Self-Service and Order Tracking:
+  - Scope: 4 apps, 10 interfaces.
+  - Runs Mar - Jul 2027; monthly FTE 50, 65, 70, 70, 45.
+  - Release 28 Jun 2027.
+  - Tools USD 100,000.
+- Wave 2, Order Capture and Fulfilment:
+  - Scope: 5 apps, 17 interfaces.
+  - Runs Jul 2027 - Mar 2028; monthly FTE 60, 90, 100, 105, 105, 105, 100,
+    30, 25.
+  - Release 28 Feb 2028.
+  - Tools USD 180,000, spread evenly by month.
+- Wave 3, Customer Data, Loyalty and Service:
+  - Scope: 5 apps, 18 interfaces.
+  - Runs Feb - Dec 2028; monthly FTE 70, 80, then 100 for six months, then
+    80, 60, 34.
+  - Release 27 Nov 2028.
+  - Tools USD 220,000.
+- Managed support:
+  - Runs Aug 2027 - Dec 2029.
+  - Team size: 12 FTE to Mar 2028, 20 FTE Apr-Dec 2028, 28 FTE in 2029.
+  - Tools USD 5,000 per month.
+- Whole-team limits: peak 120 FTE (Apr - Sep 2028); no monthly drop above
+  26 FTE.
+- Flows and documentation:
+  - 100 critical flows: W1 20, W2 40, W3 40.
+  - Documented: W1 75%, W2 60%, W3 40%.
+- Wave 1 selection score (1-5 per criterion, summed):
+  - visibility: High 5, Medium 3, Low 1;
+  - documentation = coverage % / 20, rounded;
+  - dependencies = 6 - count (W1 2, W2 4, W3 5);
+  - risk: Medium 3, High 1.
+  Totals: W1 16, W2 9, W3 7.
+- Gates:
+  - Discovery exit 26 Feb 2027.
+  - W2 price gate 25 Jun 2027; W3 price gate 28 Jan 2028.
+  - Go-live gates one week before each release.
+- Discovery exit criteria:
+  - At least 17 of 20 W1 flows documented, and at least 70 of 100 overall.
+  - All W1 acceptance criteria signed.
+  - 45 of 45 interfaces mapped.
+  - Wave 1 scope baselined.
+  - Security architecture approved.
+- Gate failure rules:
+  - 1 criterion missed: up to a 4-week extension.
+  - 2 or more missed: re-plan and re-price.
+  - Acceptance criteria still unsigned after the extension: stop.
+- Knowledge transfer: NOT a bid condition, gate criterion or customer
+  assumption anywhere. The AI Alchemist solution recovers undocumented flow
+  knowledge (assumption A56: proved on the 5 undocumented Wave 1 flows in
+  Discovery; owner Chief Solution Architect).
+- Price position: a uniform 10% cut on every phase price, conditional on
+  four conditions:
+  - Discovery gate accepted;
+  - change control;
+  - liability cap of 100% of prior 12-month fees;
+  - 75% offshore delivery.
+- Reversal triggers: full fixed price before the gate; rival below the floor;
+  offshore share capped.
+- Bid scoring:
+  - Weights: strategic fit 20%, ability to win 20%, delivery capability 20%,
+    economics 25%, risk 15%.
+  - Scores: 4, 3, 4, 5, 2.
+  - Rule: bid if the weighted total is at least 3.5 and no score is 1.
+- Approvals: Finance confirms rates by 13 Nov 2026; Bid Board approves by
+  20 Nov 2026.
+
+4. STRUCTURE
+
+Page header: title only ("Retail Application Modernization - Bid Pack").
+
+Executive Summary (one printed page; no assumption tags on this tab):
+- A message headline: "Bid at USD 16.30M: full scope, first release inside
+  6 months, 18% margin protected".
+- A highlighted deal banner in one row:
+  - a coloured "The deal" label;
+  - a wider "Deal summary" column describing the customer need and our scope;
+  - Term, Scope, Model and Competition columns.
+- Three headline tiles:
+  - Customer cost: total price and % below the USD 28M envelope;
+  - Time to value: first-release date, "Indicative" until the gate;
+  - Our margin: blended margin %, labelled "Blended" only.
+- Two cards side by side:
+  - "on four conditions": the recommendation and its conditions;
+  - the top risk (undocumented flows), contained by the gate, change control
+    and AI Alchemist knowledge capture.
+- A programme timeline graphic:
+  - Discovery, three waves and managed support as bars;
+  - each bar labelled with scope and release date;
+  - gates and releases marked.
+- An evidence-quality line, a pointer to the Assumptions tab, and a glossary
+  link.
+
+Bid Decision & Commercial (title: "Bid Decision and Commercial Value Brief:
+bid, match the price, protect 18%"; key summary only):
+- A key-message callout with the computed blended margin and headroom above
+  the floor.
+- Section 1, Decision: three bullets covering the decision, the four
+  conditions and the three reversal triggers.
+- Section 2, Value: a table for business leaders, the CIO and procurement.
+  The CIO row is in plain language, e.g. "Old and new systems run side by
+  side while parts are replaced one at a time. Interfaces are tested
+  automatically, and every release passes a security check."
+- A one-line problem statement, then three options:
+  - A: hold the bottom-up price;
+  - B: match by price cut (recommended);
+  - C: levers plus trade-offs.
+  Show price, blended margin, scope and main trade-off.
+- Section 3: weighted scoring table.
+- Section 4:
+  - phase table (scope | model | price | average FTE | cost | margin |
+    margin %) with totals; the caption carries the price and cost formulas;
+  - a compact non-manpower cost table: phase | tools and environments |
+    transition | contingency (5% of people) | total. Its heading states the
+    computed total and its share of delivery cost (e.g. "Tools, transition
+    and contingency add USD 1.33M, 11.5% of delivery cost"). The caption notes
+    hosting is paid by the customer.
+- Section 5:
+  - year margin bar chart against an 18% line;
+  - a compact year table: Year | Price | Cost | Margin % (no Margin USD
+    column);
+  - the heading states the lowest year margin, computed.
+- No further sections and no appendix.
+
+Delivery Readiness (title: "Client Response and Delivery Readiness Plan:
+release in 6 months without disrupting users"):
+- A key-message callout.
+- One combined wave table: wave | domain | apps with illustrative names |
+  interfaces | timeline (dates and release date) | depends on |
+  documentation % | visibility | risk | Wave 1 selection score.
+  - The totals row shows only 14, 45, "Mar 2027 - Dec 2028" and 55%.
+  - Short columns never wrap mid-word.
+- Five temporary bridges for coexistence.
+- Section 1:
+  - roadmap timeline graphic;
+  - roadmap table: phase | timing | owner role | scope in | scope out |
+    exit criteria | dated gates;
+  - every pre-gate release marked "Indicative";
+  - the Discovery exit gate card with its failure rules.
+- Section 2, first release without disruption:
+  - strangler facade;
+  - pilot of 10 stores and 5% of online users;
+  - parallel run;
+  - rollback within 30 minutes;
+  - 4-week hypercare;
+  - communication and training.
+- A monthly team-size chart showing the 120 FTE peak, with a one-line note.
+  No resource loading table.
+- Section 3: safeguards table (security, integration, testing, support,
+  contracting).
+- Section 4: customer assumptions to validate before signing (no knowledge
+  transfer row).
+- Section 5: five success measures. Baseline is "To be measured in
+  Discovery"; never invent one.
+- Section 6: ten risks with owner role and follow-up date. Incumbent
+  cooperation is mitigated by AI Alchemist, owner Chief Solution Architect.
+- Section 7: the Bid Board decision, then a 30/60/90-day table of six actions
+  with owner role and fixed date.
+
+Assumptions:
+- Heading with the computed assumption count.
+- A note that highlighted tags mean [Assumption Axx].
+- Register: ID | assumption | value | where used | how to validate | owner
+  role. The ID column is sized to its content.
+- A glossary of acronyms and jargon (no "KT" entry).
+
+5. QUALITY RULES
+- Every heading states a message, not a topic. Any number in a heading is
+  computed, never typed.
+- Sentences under 25 words. Plain language over jargon. No filler.
+- Outside the summary tab, every added number carries a linked [Assumption
+  Axx] tag. Changed prices carry a "Revised" marker.
+- Illustrative names and roles only.
+- Compute all figures in code. Assert that:
+  - price - cost = margin in every row;
+  - year totals equal phase totals;
+  - FTE-months x rate = people cost;
+  - scope totals 14 and 45;
+  - blended and steady-state margins are at least 18%;
+  - every tag resolves to a register row, and every register row is used;
+  - monthly FTE sums to total FTE-months, peaks at 120, and drops at most
+    26 per month.
+
+6. HTML SPECIFICATION
+- Inline CSS and JS only. No external libraries, fonts or images. Charts as
+  inline SVG with hover titles; labels must not overlap gate lines.
+- Tabs work by mouse and keyboard (arrow keys, Home, End). Printing shows all
+  tabs in order, with the summary on one page.
+- Print footer shows the file name, "Illustrative case" and "Page X of Y".
+- Tables have header rows; headings never wrap onto two lines. Numbers are
+  right-aligned.
+- Tags are highlighted pills linking to their register row.
+- No horizontal scrolling at 1280px or 1366px width.

@@ -1,0 +1,129 @@
+Refer the attached usescases for today. Review critically Usescase 4 as a senior Delivery Management Reviewer and provide approach for next steps.
+
+As senior delivery reviewer provide sequence prompts need to be used for building the output.
+
+Refer the attached usescases for today. Review critically Usescase 4 as a senior Delivery Management Reviewer. Understand the overall expectation and keep the context ready.
+
+Act as a senior Delivery Management Reviewer. Analyze this customer recovery and renewal case. Produce: below
+1. A concise account-health assessment.
+2. The 3–5 most material delivery, customer, commercial, and relationship risks.
+3. The core leadership decision that must be made now.
+4. The facts that are missing and need to be generated as clearly labelled synthetic assumptions.
+
+Create realistic, internally consistent synthetic evidence for the customer account case below.
+Generate concise tables for:
+1. The 11 product defects: ID, customer journey, severity (P0/P1/P2), age, affected users, owner, current status, next recovery milestone, and customer impact.
+2. Customer feedback: 10 fictional comments tagged by theme, sentiment, stakeholder type, and priority.
+3. The 12 promised value claims: claim, target measure, baseline, current evidence status, verified value if available, evidence gap, and owner.
+4. Account-health trend for the last 3 months: advocacy, escalations, priority defects, adoption signal, support SLA, and customer confidence.
+5. Delivery capacity: roles, available capacity, current allocation, recovery capacity required, and expansion-work conflict.
+
+Rules:
+- Use fictional names only.
+- Add realistic variation; do not make every item negative.
+- Clearly label all generated data as “Synthetic illustration.”
+- Do not invent verified value outcomes where evidence does not exist.
+
+Using the fixed case facts and the synthetic evidence, recommend a customer recovery and renewal strategy as a senior delivery leader.
+
+Structure the response as:
+1. Decision recommendation: proceed, pause, or restrict the transformation/expansion conversation.
+2. Recovery objective for the next 90 days.
+3. Defect and service prioritization approach: P0, P1, and P2.
+4. Delivery capacity decision, including which work must be deferred or protected.
+5. Relationship strategy for the new CIO and other stakeholders.
+6. Value-realization strategy that separates:
+   - verified value;
+   - value still being measured;
+   - unproven claims to be re-baselined or retired.
+7. Explicit recovery gates that must be met before a broad renewal or expansion proposal.
+
+Create the mandatory deliverable titled:Customer Recovery & Renewal Decision Brief
+
+Audience: Delivery Sponsor, Account Executive, Customer Success Lead, Engineering Leader, and Finance Partner.
+Length: maximum 2 pages or 6 slide-equivalent sections.
+Tone: factual, accountable, concise, executive-ready.
+
+Include:
+1. Executive decision: why broad expansion should be deferred, restricted, or conditionally pursued.
+2. Customer account-health snapshot using the supplied fixed facts.
+3. Customer concerns, critical product defects, service gaps, and customer-experience impact.
+4. Promised versus verified value: clearly distinguish evidence from estimates.
+5. Delivery capacity and staffing implication.
+6. Renewal risk and the potential consequence of inaction.
+7. Recommended recovery strategy and 3–5 recovery gates for future renewal/expansion discussion.
+8. Leadership decisions needed this week.
+
+Use tables where they improve clarity. Label synthetic evidence clearly. Do not include generic statements such as “improve communication” without naming the owner, cadence, and evidence the customer will receive.
+
+Create a detailed but concise 90-day Customer Recovery & Renewal Plan.
+Use three phases:
+- Days 0–30: stabilize and establish trust
+- Days 31–60: resolve priority issues and validate outcomes
+- Days 61–90: demonstrate value and assess renewal readiness
+For every action include:
+- Action
+- Business/customer objective
+- Named role owner
+- Supporting teams
+- Due date or checkpoint
+- Customer-visible evidence
+- Success measure
+- Key dependency or risk
+- Escalation path if off track
+Include specific actions for:
+- resolving the 11 user-facing defects;
+- customer communication and service recovery;
+- customer journey/usability validation;
+- measuring/re-baselining 12 value claims;
+- new CIO engagement;
+- recovery capacity protection;
+- decision gates for renewal or growth discussion.
+
+Create the mandatory deliverable titled:
+Executive Customer Engagement & 90-Day Plan
+Audience: internal leadership and the customer steering committee.
+Length: maximum 2 pages or 6 slide-equivalent sections.
+Include:
+1. A 30/60/90-day roadmap with owners and checkpoints.
+2. A commitment register linking each product, service, and value commitment to:
+   - owner;
+   - due date;
+   - customer-visible proof;
+   - outcome measure;
+   - status.
+3. A recovery scorecard with 5–7 measures:
+   - priority defect count and ageing;
+   - defect recurrence;
+   - customer update timeliness;
+   - customer advocacy/confidence;
+   - verified value claims;
+   - service reliability;
+   - recovery capacity versus plan.
+4. Customer communication cadence and escalation path.
+5. A concise customer steering-committee message.
+Separate verified outcomes from proposed improvements or estimates. Make all ownership and evidence explicit.
+
+Act as a critical executive reviewer. Review the Customer Recovery & Renewal Decision Brief and Executive Customer Engagement & 90-Day Plan against the case requirements.
+Assess:
+- Does the recommendation prioritize customer recovery over premature growth?
+- Are all 11 unresolved defects addressed through a credible prioritization and ownership approach?
+- Are value claims clearly distinguished as verified, unverified, or estimated?
+- Is recovery capacity protected from expansion work?
+- Are the 90-day actions feasible, owned, measurable, and customer-visible?
+- Does the plan address both product usability and service reliability?
+- Are renewal and expansion decisions gated by evidence?
+- Are assumptions clearly labelled as synthetic?
+Return:
+1. Critical gaps or unsupported claims.
+2. Specific corrections required.
+3. A final readiness score out of 10.
+4. A 60-second leadership presentation narrative.
+
+Create realistic synthetic customer-account data covering product defects, customer feedback, promised business benefits, actual results and account-health trends. Include both positive and negative observations, with some claims lacking proof. Use fictitious customer and stakeholder names, preserve the case assumptions, and format the output as a simple dataset . Using all of this provide dynamic rich UI for changing the values will provide status of Customer advocacy.
+
+Generate html file with rich UI with infographics.
+
+Prepare Executive html similar to attached document.
+
+Add one more final step. Build customer trust by showing the key metrics movement from 0 days to 30 days to 60 days to 90 days and conclude with executive approach. Add it to previous executive html.

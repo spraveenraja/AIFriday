@@ -1,0 +1,31 @@
+### 1. Initial context and problem analysis
+
+“Read the supplied AI Fridays workbook and focus only on Problem Statement 05: Multi-Program Delivery Predictability & Resource Prioritization. Summarize the business problem, stakeholders, competing priorities, supplied facts, likely root causes, and missing information. Keep supplied figures unchanged. Clearly distinguish facts from inferences and assumptions. Do not invent customer names, program details, or results.”
+
+### 2. Options and recommendation
+
+“Using the PS 05 scenario, compare at least three practical leadership options for improving portfolio delivery predictability. For each option, describe customer impact, capacity implications, margin implications, dependencies, risks, and trade-offs. Recommend one option that can start with the information and resources available. Do not assume overtime or immediate contractor productivity.”
+
+### 3. Decision brief
+
+“Draft a concise CxO decision brief for PS 05. Put the recommendation first. Include three headline measures from the supplied scenario, the top risk and mitigation, and a clear approval ask with an accountable role and date. Keep it readable as a one-page executive summary. Label proposed targets separately from the original exercise figures.”
+
+### 4. 90-day action plan
+
+“Create a practical 90-day plan for the recommended PS 05 portfolio reset. Organize actions into dated phases and checkpoints. Give every action an accountable role owner and due date. Include measures with baseline, proposed target, owner, and review date; continue/adjust/stop gates; and risk responses with owners. Use role titles where names were not provided.”
+
+### 5. Interactive visual concept
+
+“Design a small, self-contained interactive prioritization example for the PS 05 HTML deliverable. Let the reader select a leadership lens such as Balanced, Customer Launch, or Seasonal Service. Update the sample scores, ranking, and decision implication when the selection changes. Label all sample ratings and results ‘Illustrative—not actual program data,’ show the weights and calculation, and keep the source figures unchanged. Do not use external libraries or network assets.”
+
+### 6. HTML design and assembly
+
+“Create a standalone, responsive HTML decision pack for PS 05 using the supplied workbook’s dark navy, teal, cyan, and amber visual palette. Include a left-side table of contents with working section links, a one-page executive summary, the decision brief, the 90-day plan, compact visuals, and a print-friendly layout. Keep the language concise and avoid unsupported claims. Do not include a checklist scoring or review section.”
+
+### 7. Validation and correction
+
+“Check the HTML deliverable against the supplied quality criteria for executive clarity, storyline, problem understanding, evidence, options, ownership, visual quality, and responsible AI practice. Verify that all supplied figures are unchanged; assumptions and proposed targets are labelled; every action has an owner and date; and the interactive example is clearly illustrative. List corrections needed, then apply them. Do not add a scorecard or checklist review section to the deliverable.”
+
+### Suggested jury explanation
+
+“We used AI in stages: first to structure the problem and separate facts from assumptions, then to compare options and draft the leadership brief and action plan, and finally to help create an interactive visual. We checked the figures against the supplied workbook, labelled proposed targets and illustrative examples, and identified the human validation still required.”

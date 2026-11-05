@@ -1,0 +1,18 @@
+Prompts used for Use case 03
+
+ChatGPT to first analyze the problem statements:
+Attached is the list of use cases for today's contest along with rules. As an senior evaluator i want you to read through the document carefully, understand what is exactly required to showcase and carries weightage. I'm assigned with problem statement 03 "Software Quality, Engagement Health & Delivery Assurance". Tell me in sequential steps how to address this problem statement through an application that would address different aspects of the users
+
+Synthetic data is required and now revise the understanding of the contest, problem statement and revise the step by process
+
+let us now start creating the solutions step by step. You can explain me approach one step at a time and I shall provide my views or changes. At the end, create a prompt and move to next step.
+
+The action should categorize in a 30, 60 and 90 day plan, Do i make sense for better actionable outcomes? Also the action recommended should clearly tell who the action owner in the plan.
+
+
+Accommodate the Rich UI in this application
+
+Review the UI for overlaps, hidden pie charts, tables to be long enough to see its contents for readability. Add an chatbot to answer the questions. Keep the answers polite and neutral. Provide placeholders within the code to integrate with an AI model so that recommendations can be real time
+
+
+This is the prompt for coding. Build the application, review yourself as an senior engineer and also as an executive user for readibility, contents if it makes sense.
