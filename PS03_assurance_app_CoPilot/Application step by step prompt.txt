@@ -1,0 +1,271 @@
+Application step by step prompt
+
+### Step 1 prompt
+
+> Help refine this purpose statement for an executive application addressing “Software Quality, Engagement Health & Delivery Assurance.”
+>
+> The application supports leaders overseeing a fictional portfolio of 28 client engagements across software engineering, modernization, and IT services. It should help users:
+>
+> - Identify engagement risks early and understand the evidence behind each assessment.
+> - Distinguish poor performance from incomplete, stale, or unverified evidence. Missing evidence must not automatically mean poor performance.
+> - Assign every recommended action to one clearly named accountable owner. List contributors separately where needed.
+> - Organize actions into 30-, 60-, and 90-day horizons. For each action, specify the due date, expected outcome, and evidence of completion.
+> - Monitor whether actions improve quality, delivery, service stability, customer outcomes, and governance effort.
+>
+> Preserve the supplied case figures unchanged: 28 engagements across five business units; portfolio health of 4 red, 9 amber, and 15 green; 22% repeat findings; 31% overdue actions; 64% of sampled releases fully traceable; and 240 governance person-hours per month.
+>
+> Any additional engagement records or details must be synthetic, clearly labeled, and contain no real or confidential customer, employee, contract, pricing, or company information.
+>
+> Return a concise application purpose statement and the key leadership decisions it must support. Do not invent contest requirements.
+
+
+
+
+
+
+### Step 2 prompt
+
+> Define user personas for an executive application addressing Software Quality, Engagement Health & Delivery Assurance. Use these proposed roles: President/executive sponsor, delivery assurance leader, engineering manager, service manager, and auditor/control reviewer.
+>
+> For each persona, specify:
+> - Their main decisions or tasks
+> - The information they need
+> - What they may view, update, approve, or flag
+>
+> Ensure every action has one clearly named accountable owner, with contributors listed separately. Actions must be organized into 30-, 60-, and 90-day horizons and include a due date, expected outcome, status, and completion evidence.
+>
+> Keep the solution suitable for a contest demonstration using synthetic data. Do not invent requirements beyond the supplied case.
+
+
+
+
+
+
+### Step 3 prompt
+
+> Design a transparent engagement health assessment model for a fictional portfolio addressing Software Quality, Engagement Health & Delivery Assurance.
+>
+> Assess these dimensions separately: delivery predictability, release quality, production/service stability, corrective actions and repeat findings, evidence/control traceability, and customer impact.
+>
+> Define explainable rules for Red, Amber, Green, and Unknown. Missing, stale, or unverified evidence must be shown as Unknown for the affected measure and must not automatically mean poor performance. Separate performance status from evidence confidence. Do not use an opaque average that allows a strong result in one critical dimension to hide a severe verified risk in another.
+>
+> For each rating, specify what evidence is needed, how it affects engagement-level status, and what follow-up is appropriate. Include the case examples of (1) milestone progress appearing healthy while defect leakage is high, and (2) stable service outcomes with incomplete audit evidence. Preserve the supplied portfolio snapshot of 4 red, 9 amber, and 15 green as a case fact; do not change it. The case provides no numeric thresholds, so label any proposed thresholds as assumptions requiring approval.
+>
+> Return the model and its decision logic, but do not generate synthetic records yet. Do not invent contest requirements.
+
+
+
+
+
+
+### Step 4 prompt
+
+> Create a synthetic base dataset specification for a demonstration application addressing “Software Quality, Engagement Health & Delivery Assurance.”
+>
+> Use invented engagement IDs and names, invented business-unit names, synthetic measures and evidence references, and role-based or invented synthetic action owners. Do not use real or confidential customer, employee, contract, pricing, or company information.
+>
+> Include linked datasets for:
+> 1. 28 engagements across five invented business units
+> 2. Health observations that support transparent status and evidence-confidence calculation
+> 3. Quality and service findings
+> 4. Sampled releases and evidence traceability
+> 5. Actions linked to findings or evidence gaps
+>
+> Preserve these supplied figures exactly: 4 red, 9 amber, 15 green engagements; 22% repeat findings; 31% overdue actions; 64% sampled releases fully traceable; and 240 governance person-hours per month. To illustrate the percentages, use 50 findings with 11 repeats, 29 actions with 9 overdue, and 25 sampled releases with 16 fully traceable. Label these denominators as synthetic choices.
+>
+> Each health observation must include its engagement, dimension, measure, value and denominator where applicable, measurement period, evidence date, confidence/status, and rating explanation. Overall engagement ratings must be explainable from the observations and the agreed rating rules.
+>
+> Each action must link to its triggering risk, finding, or evidence gap and include exactly one accountable owner, optional contributors, 30-, 60-, or 90-day horizon, due date, expected outcome, status, and completion evidence.
+>
+> Include the milestone-green/high-defect-leakage engineering case and the stable-service/incomplete-audit-evidence service case. Missing evidence must not automatically be treated as poor performance.
+>
+> Return the dataset schemas, validation checks, and a small set of sample records illustrating those cases. Do not change the supplied case facts. Label all generated information as synthetic.
+
+
+
+
+
+### Revised Step 5 prompt
+
+> Define an explainable metric and rating configuration for a synthetic demonstration application addressing Software Quality, Engagement Health & Delivery Assurance.
+>
+> Use six dimensions: delivery predictability, release quality, service stability, customer impact, findings and action health, and evidence traceability. Include SLO compliance, breach severity and recurrence, customer impact, and assessed or estimated penalties within service stability.
+>
+> For each indicator, state its formula, observation period, minimum data needed, provisional Green/Amber/Red bands, Unknown conditions, and any critical override. For positive percentage measures, Green requires performance greater than 95%. Use these provisional bands:
+>
+> - Delivery predictability: Green >95%; Amber 80–95%; Red <80%.
+> - Evidence traceability: Green >95%; Amber 60–95%; Red <60%.
+> - SLO compliance: Green >95% of applicable target measurements met, with no material breach or penalty; Amber at or below 95% or with an isolated, noncritical breach; Red for a critical or repeated breach, or an assessed material penalty.
+> - Failed or rolled-back production releases: Green ≤10%; Amber >10–20%; Red >20%; a verified severity 1 customer-impacting release incident overrides to Red.
+> - Repeat findings: Green <10%; Amber 10–25%; Red >25%.
+> - Overdue actions: Green ≤15%; Amber >15–40%; Red >40%.
+>
+> Treat all thresholds as contest-demo assumptions, not industry standards or contract requirements. Compare service results to each engagement’s applicable SLO. Missing, stale, or unverified evidence must be Unknown for that measure and must not automatically mean poor performance. Define overall engagement roll-up without using an opaque average. Preserve the supplied case facts and label generated data as synthetic.
+
+
+
+
+
+
+
+
+### Step 6 prompt
+
+> Generate a synthetic demonstration dataset for a fictional application addressing Software Quality, Engagement Health & Delivery Assurance.
+>
+> Use invented names, identifiers, business units, dates, findings, evidence references, and role-based synthetic owners. Do not use real or confidential customer, employee, contract, pricing, or company information. Label all generated records synthetic.
+>
+> Create linked records for engagements, health observations, findings/incidents, sampled releases and evidence, and actions. Include the two examples:
+> - ENG-007: 97% milestone predictability but 25% failed or rolled-back production releases and verified high defect leakage. The dimension status should show delivery predictability Green, release quality Red, and overall Red based on the verified quality risk.
+> - SRV-012: 99% SLO compliance, no material breach or penalty, and 64% traceability across sampled releases. The dimension status should show service stability Green, evidence traceability Amber, and overall Amber due to the verified evidence gap.
+>
+> Preserve the supplied case facts: 28 engagements across five business units; 4 Red, 9 Amber, 15 Green overall; 22% repeat findings; 31% overdue actions; 64% sampled releases fully traceable; and 240 governance person-hours per month. For illustrative denominators, use 50 findings with 11 repeats, 29 actions with 9 overdue, and 25 sampled releases with 16 fully traceable. Label these denominators as synthetic choices.
+>
+> Calculate overall health using the approved Step 5 rating rules. Do not assign an overall status without an explanation linking it to evidence. Missing, stale, or unverified evidence must be Unknown for the affected measure and must not automatically cause a Red status.
+>
+> Each action must link to a risk, finding, or evidence gap and have exactly one accountable role-based owner, optional contributors, a 30-, 60-, or 90-day horizon, due date, expected outcome, status, and completion evidence.
+>
+> Return the dataset files or tables, plus validation results demonstrating that all portfolio counts and percentages reconcile. Do not alter the supplied case facts.
+
+
+
+
+
+
+### Revised Step 7 prompt
+
+> Design an AI-assisted action recommendation and tracking approach for a synthetic Software Quality, Engagement Health & Delivery Assurance application.
+>
+> The AI model generates proposed actions from verified metrics, findings, SLO events, customer-impact evidence, and evidence gaps. It may recommend a suitable accountable owner role from an approved role list, plus optional contributors. A human must review, edit, accept, or reject each recommendation before it becomes an assigned action.
+>
+> Group actions into 30-day stabilization, 60-day correction/control, and 90-day verification/improvement horizons. For every proposal, include the triggering evidence, one accountable owner role, optional contributors, due date/horizon, expected outcome, success measure, priority rationale, confidence or uncertainty, and completion evidence.
+>
+> Use these examples:
+> - ENG-007: high failed-release rate and verified defect leakage.
+> - SRV-012: stable service outcomes but 64% release evidence traceability.
+> - An SLO breach with possible penalty exposure.
+>
+> Keep metric calculations and Red/Amber/Green/Unknown status tied to approved rules, not AI judgment. The AI must not invent facts, assign actions without approval, or make business decisions autonomously. It must distinguish verified facts from hypotheses and say when the evidence is insufficient.
+>
+> Return the workflow, ownership rules, action-status model, and illustrative AI-generated recommendations. Keep all records synthetic and preserve the supplied case facts.
+
+
+
+
+
+### Step 8 prompt
+
+> Design a review, escalation, and action-closure workflow for a synthetic Software Quality, Engagement Health & Delivery Assurance application.
+>
+> Cover: engagement evidence updates; data-quality and completeness checks; rule-based metric/status calculation; delivery assurance review; AI-generated action proposals; human approval or rejection; assignment to one accountable owner; 30/60/90-day tracking; configurable escalation; closure evidence; and independent verification of effectiveness.
+>
+> Distinguish owner-reported completion from verified effectiveness. Missing or stale evidence should be Unknown for the affected measure. AI may recommend actions but must not approve actions, change official ratings, or make business decisions. Define responsibilities for engineering managers, service managers, delivery assurance, executives, action owners, and auditors/control reviewers.
+>
+> Use immediate escalation for configured critical customer-impacting release incidents or critical SLO breaches. Treat other thresholds as configurable assumptions requiring approval. Keep all examples synthetic and preserve the supplied case facts.
+>
+> Return the workflow stages, status transitions, escalation triggers, and role responsibilities.
+
+
+
+
+
+
+### Step 9 prompt
+
+> Create a 90-day pilot plan for a synthetic demonstration application addressing Software Quality, Engagement Health & Delivery Assurance. The pilot covers one fictional engineering engagement and one fictional service engagement; do not use real or confidential data.
+>
+> Organize the plan into Days 1–30 (configure and baseline), Days 31–60 (run and refine), and Days 61–90 (verify and decide). Include owners, checkpoints, expected outputs, risks, and decision criteria.
+>
+> Use these proposed measures and targets, clearly labeled as assumptions:
+> - Governance preparation effort: establish a pilot baseline at Day 0; target 20% reduction by Day 90. The supplied 240 governance hours/month is portfolio context, not the pilot baseline.
+> - Evidence traceability: establish the pilot baseline; target at least 90% of sampled releases fully traceable by Day 90. The supplied 64% is portfolio context.
+> - Actions closed on time and verified: establish the pilot baseline; target at least 85% of actions due during the pilot are closed on time with verified evidence. The supplied 31% overdue is portfolio context.
+> - Operational guardrail: release failure rate and SLO compliance do not deteriorate from the pilot baseline without explanation and escalation.
+>
+> Monitor the supplied 22% repeat-finding rate as context; do not claim a statistically reliable improvement from only two pilot engagements. Preserve all case figures and label all pilot data synthetic. Return the timeline, measures, owners, checkpoints, and continue/revise/stop decision criteria.
+
+
+
+
+
+
+
+
+### Step 10 prompt
+
+> Plan the information architecture and contest demonstration flow for a synthetic application addressing Software Quality, Engagement Health & Delivery Assurance.
+>
+> Propose five concise screens: executive portfolio, engagement detail, evidence/findings, AI recommendations/action review, and 30/60/90-day action/pilot view. For each, specify its primary user, key information, actions, and drill-downs.
+>
+> The application must show six health dimensions, with SLO breaches and penalties inside service stability; separate performance status from evidence confidence; display Unknown for missing/stale/unverified measures; link AI-generated recommendations to evidence; and require human approval before actions are assigned. Every accepted action has one accountable owner and a 30/60/90-day horizon.
+>
+> Design the walkthrough around the supplied synthetic examples ENG-007 (milestones healthy, release quality Red) and SRV-012 (service stable, evidence traceability Amber). Preserve all supplied case figures. Keep the walkthrough suitable for a contest prototype and distinct from the integrated three-minute leadership summary.
+>
+> Return screen descriptions, user interactions, and a concise demo sequence. Do not introduce real or confidential data.
+
+
+
+
+
+
+### Step 11 prompt
+
+> Define responsible-AI safeguards for a synthetic executive application addressing Software Quality, Engagement Health & Delivery Assurance.
+>
+> The application calculates metrics and Red/Amber/Green/Unknown status using approved deterministic rules. An AI model may explain evidence-backed patterns and propose actions, owners from an approved role list, 30/60/90-day horizons, outcomes, and measures. A human must review, edit, accept, or reject each recommendation before assignment.
+>
+> Require recommendations to cite linked evidence and timestamps, separate verified facts from hypotheses, disclose uncertainty and missing/conflicting data, and say when evidence is insufficient. The AI must not invent facts, change official ratings, assign actions without approval, or make business decisions autonomously.
+>
+> Include contest safeguards: synthetic data only; clearly labeled invented records; no real or confidential information. Specify audit fields to retain for AI output, review, edits, and approved actions.
+>
+> Return safeguards, reviewer responsibilities, audit requirements, and failure behavior.
+
+
+
+
+
+
+
+
+
+
+### Step 12 prompt
+
+> Create a verification plan for a synthetic executive application addressing Software Quality, Engagement Health & Delivery Assurance.
+>
+> Include checks for:
+> - Data reconciliation: 28 engagements across five synthetic business units; 4 Red, 9 Amber, 15 Green; 11/50 repeat findings; 9/29 overdue actions; 16/25 traceable releases; and the supplied 240 governance hours/month baseline.
+> - Metric formulas, threshold boundaries, and Unknown behavior. Green requires greater than 95% for applicable positive percentage measures.
+> - ENG-007: milestone predictability Green, release quality Red due to verified defect leakage, overall Red with evidence-based explanation.
+> - SRV-012: service stability Green, traceability Amber, overall Amber due to a verified evidence-control gap.
+> - SLO breach and penalty handling.
+> - AI evidence grounding, uncertainty disclosure, human approval, and prevention of unsupported or autonomous actions.
+> - Action ownership, 30/60/90-day horizons, status transitions, role access, and accessible status display.
+>
+> For each check, state test data, steps, expected result, and evidence to retain. Use synthetic data only and preserve supplied case facts.
+
+
+
+
+
+
+### Step 13 prompt
+
+> Assemble the PS 03 contest solution for “Software Quality, Engagement Health & Delivery Assurance.”
+>
+> Produce content for exactly two consolidated outputs:
+> 1. Engineering & Service Assurance Decision Brief.
+> 2. Governance Improvement & 90-Day Pilot Plan.
+>
+> Cover the leadership problem, supplied case facts, 28-engagement portfolio view, six health dimensions, proposed rating logic, SLO breaches and penalties within service stability, Unknown evidence handling, ENG-007 and SRV-012 examples, AI-generated recommendations with human approval, named role-based action owners, review/escalation/closure workflow, 30/60/90-day milestones, pilot measures, targets, safeguards, and Day 90 decision criteria.
+>
+> Prepare a concise PS 03 leadership summary that can be incorporated into the team’s integrated three-minute contest summary. Include a walkthrough sequence for the application: portfolio → ENG-007 → SRV-012 → AI recommendation review → action plan.
+>
+> Preserve all supplied case figures exactly. Clearly label synthetic records and proposed thresholds/targets as assumptions. Do not use real or confidential information. Do not claim proposed outcomes have been achieved. Do not invent contest scoring criteria or create additional mandatory deliverables.
+
+
+
+
+
+
+

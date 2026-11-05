@@ -1,0 +1,42 @@
+Governance Improvement & 90-Day Pilot Plan
+
+Workflow and safeguards
+- Engineering and Service Managers refresh evidence; data-quality checks flag missing, stale, and conflicting inputs before scoring.
+- Approved deterministic rules calculate dimension status; Delivery Assurance reviews the result and AI does not set official ratings.
+- Recommendations cite evidence IDs and dates, separate facts from hypotheses, disclose uncertainty, and remain pending until a sponsor or Delivery Assurance Leader approves, edits, or rejects them.
+- Action states: Draft → Approved → In Progress → Owner Reported Complete → Verified. The named owner reports completion; an Auditor / Control Reviewer or Delivery Assurance Leader independently verifies effectiveness.
+- Every accepted action keeps one accountable owner, optional contributors, a due date, a 30/60/90-day horizon, expected outcome, success measure, escalation condition, and completion evidence.
+- Escalate immediately for a verified critical customer-impacting release incident or critical SLO breach; raise other risks at the next owner/review checkpoint.
+- The Executive Sponsor resolves portfolio trade-offs and Day 90 continue / revise / stop; auditors can flag evidence or closure gaps.
+
+90-day pilot
+- Days 1-30: Configure and Baseline
+  Owner: Delivery Assurance Leader
+  Checkpoints: Confirm personas, freeze synthetic baseline, configure rating rules, and validate ENG-007 and SRV-012 walkthrough data.
+  Expected outputs: Baseline evidence pack, owner list, first review cadence, and pilot dashboard sign-off.
+  Risks: Baseline assumptions may be unclear if evidence owners do not confirm the sample set.
+  Decision criteria: Continue if both pilot engagements have accepted owners, baseline measures, and no unresolved data-definition dispute.
+- Days 31-60: Run and Refine
+  Owner: Engineering Manager / Service Manager
+  Checkpoints: Operate the review cycle, test AI recommendation review, and track 30/60-day actions with escalation where needed.
+  Expected outputs: Refined thresholds, approved actions, evidence refreshes, and sponsor-ready exception summaries.
+  Risks: Teams may revert to manual reporting if the workflow feels heavier than the baseline process.
+  Decision criteria: Continue if governance preparation effort trends down and no control or service guardrail deteriorates without explanation.
+- Days 61-90: Verify and Decide
+  Owner: President / Executive Sponsor
+  Checkpoints: Verify closure evidence, compare pilot baselines to current results, and decide continue / revise / stop.
+  Expected outputs: Pilot outcome summary, verified evidence sample, rollout recommendation, and leadership decision record.
+  Risks: Apparent improvement may not be reliable if closure evidence is owner-reported but not independently checked.
+  Decision criteria: Continue only if governance effort falls toward the 20% target, evidence traceability approaches 90%, and on-time verified action closure approaches 85% without degrading release failure or SLO performance.
+
+Illustrative pilot measures and assumptions
+- Governance preparation effort: measure a pilot-specific Day 0 baseline; proposed target is a 20% reduction by Day 90.
+- Evidence traceability: measure a pilot-specific baseline; proposed target is at least 90% of sampled releases fully traceable by Day 90.
+- Actions closed on time and verified: measure a pilot-specific baseline; proposed target is at least 85% of actions due in the pilot.
+- Operational guardrail: release failure rate and SLO compliance must not deteriorate without explanation and escalation.
+- The portfolio figures of 240 governance hours/month, 64% traceability, 31% overdue actions, and 22% repeat findings are context—not pilot baselines or proof of pilot impact.
+
+Day 90 decision
+- Continue if the pilot shows lower governance effort, stronger evidence traceability, and verified action closure without degrading release or service outcomes.
+- Revise if the workflow is valuable but thresholds, ownership, or evidence collection still create friction.
+- Stop if the pilot increases effort, obscures accountability, or fails to preserve assurance quality.

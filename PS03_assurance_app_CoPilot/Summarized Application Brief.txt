@@ -1,0 +1,84 @@
+Summarized Application Brief 
+
+
+
+## Consolidated application brief
+
+> Build a Python application for a fictional executive portfolio called **Software Quality, Engagement Health & Delivery Assurance**. Use a rich desktop interface with PySide6, suitable for development in VS Code. Use SQLite to store the demonstration data. Use synthetic data only; do not use real or confidential customer, employee, contract, pricing, or company information.
+>
+> ### Business purpose
+>
+> Help executives and delivery leaders identify engagement risks early, understand evidence quality, review AI-proposed actions, assign accountable owners, and monitor improvements through 30-, 60-, and 90-day horizons.
+>
+> ### Users and role views
+>
+> Support these personas: President/executive sponsor, Delivery Assurance Leader, Engineering Manager, Service Manager, and Auditor/Control Reviewer. Show role-appropriate information and actions. Every accepted action has exactly one accountable owner; contributors may be listed separately.
+>
+> ### Portfolio and synthetic data
+>
+> Create linked SQLite data for 28 engagements across five invented business units; health observations; findings/incidents; sampled releases and evidence; actions; and SLO breaches/penalties.
+>
+> Preserve the supplied case figures exactly:
+>
+> - 28 engagements across five business units
+> - Portfolio health: 4 Red, 9 Amber, 15 Green
+> - Repeat quality findings: 22%
+> - Actions overdue: 31%
+> - Sampled releases fully traceable: 64%
+> - Governance effort baseline: 240 person-hours per month
+>
+> For synthetic denominator examples, use 50 findings with 11 repeats, 29 actions with 9 overdue, and 25 sampled releases with 16 fully traceable. Clearly label these denominator choices and all added records as synthetic.
+>
+> Include two illustrative engagements:
+>
+> - **ENG-007:** 97% milestone predictability, 25% failed or rolled-back production releases, and verified high defect leakage. Show delivery predictability as Green, release quality as Red, and the overall engagement as Red because of the verified quality risk.
+> - **SRV-012:** 99% SLO compliance, no material breach or penalty, and 64% sampled release traceability. Show service stability as Green, evidence traceability as Amber, and overall health as Amber because of the verified evidence-control gap.
+>
+> ### Health dimensions and rating logic
+>
+> Use six dimensions: delivery predictability, release quality, service stability, customer impact, findings/action health, and evidence traceability. Include SLO compliance, breach severity and recurrence, customer impact, and assessed or estimated penalties within service stability.
+>
+> Display dimension status separately from evidence confidence. Missing, stale, or unverified evidence is Unknown for the affected measure and must not automatically mean poor performance. Overall ratings must show their evidence-based reason and must not use an opaque average that hides a critical risk.
+>
+> Treat thresholds as contest-demo assumptions, not industry or contract standards:
+>
+> - Delivery predictability: Green >95%; Amber 80–95%; Red <80%.
+> - Evidence traceability: Green >95%; Amber 60–95%; Red <60%.
+> - SLO compliance: Green when >95% of applicable target measurements are met and there is no material breach or penalty; Amber at or below 95% or for an isolated, noncritical breach; Red for a critical or repeated breach or an assessed material penalty.
+> - Failed/rolled-back production releases: Green ≤10%; Amber >10–20%; Red >20%. A verified severity 1 customer-impacting release incident overrides to Red.
+> - Repeat findings: Green <10%; Amber 10–25%; Red >25%.
+> - Overdue actions: Green ≤15%; Amber >15–40%; Red >40%.
+>
+> ### Main screens
+>
+> 1. Executive portfolio dashboard with the health mix, key indicators, material risks, and decisions needed.
+> 2. Engagement detail with dimension ratings, measures, trends, evidence confidence, source, and as-of date.
+> 3. Evidence and findings view linking incidents, release samples, findings, and evidence gaps.
+> 4. AI recommendation review where users can inspect evidence and accept, edit, or reject suggestions.
+> 5. 30/60/90-day actions and pilot view showing owners, due dates, outcomes, blockers, and verification.
+>
+> Use clear status labels and do not rely on color alone. Support filters and drill-downs that preserve the selected engagement and reporting context.
+>
+> ### AI recommendations and action workflow
+>
+> The AI model may explain evidence-backed patterns and propose actions, owner roles from an approved role list, horizons, expected outcomes, priorities, and measures. It must cite supporting evidence, distinguish facts from hypotheses, disclose uncertainty, and state when evidence is insufficient. It must not invent facts, change official ratings, assign actions without human approval, or make business decisions autonomously.
+>
+> Every action must include its linked risk/evidence, one accountable owner, optional contributors, 30/60/90-day horizon, due date, expected outcome, success measure, status, escalation condition, and completion evidence. Distinguish owner-reported completion from verified effectiveness.
+>
+> ### Pilot and safeguards
+>
+> Present a 90-day illustrative pilot using one synthetic engineering engagement and one synthetic service engagement:
+>
+> - Days 1–30: configure and establish baselines.
+> - Days 31–60: run reviews and refine.
+> - Days 61–90: verify outcomes and decide whether to continue, revise, or stop.
+>
+> Suggested pilot measures: governance preparation effort (target 20% reduction from pilot baseline); evidence traceability (target ≥90%); actions closed on time and verified (target ≥85%); operational guardrail that release failure and SLO compliance do not deteriorate without explanation and escalation. These are proposed targets, not achieved results. Use portfolio figures as context, not as pilot baselines.
+>
+> Keep all records synthetic. Include understandable validation checks for portfolio counts, percentages, ratings, SLO triggers, AI evidence grounding, action ownership, role access, and Unknown handling.
+>
+> ### Deliverable
+>
+> Create a runnable VS Code project with a polished PySide6 interface, SQLite synthetic seed data, clear setup/run instructions, and a concise user guide. Keep the app suitable for a contest demonstration and make the AI provider configurable; do not embed API keys or require confidential data.
+
+**Please confirm whether I should begin coding this as a PySide6 desktop application with SQLite and synthetic data.**

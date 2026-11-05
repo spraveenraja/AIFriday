@@ -1,0 +1,99 @@
+Engineering & Service Assurance Decision Brief
+
+Contest alignment
+- Synthetic data only.
+- Preserves supplied portfolio facts: 28 engagements, 4 Red, 9 Amber, 15 Green, 22% repeat findings, 31% overdue actions, 64% traceable release evidence, and 240 governance person-hours per month.
+- Unknown evidence is shown as Unknown and treated as an assurance follow-up, not automatic poor performance.
+
+PS03 leadership summary
+The portfolio view preserves the supplied 4/9/15 health mix while surfacing a verified release-quality risk at ENG-007 and an evidence-control gap at SRV-012. Approve named owners and a two-engagement, 90-day pilot; scale only if evidence quality, action verification, and service guardrails hold.
+
+Portfolio view
+- Scope: 28 engagements across five synthetic business units.
+- Portfolio health mix: 4 Red / 9 Amber / 15 Green.
+- Repeat findings: 11/50 (22%).
+- Overdue actions: 9/29 (31%).
+- Release evidence traceability: 16/25 (64%).
+- Governance baseline: 240 person-hours per month.
+- Synthetic denominator choices: 11/50 repeat findings, 9/29 overdue actions, and 16/25 traceable sampled releases.
+
+Health by dimension (engagement counts; Unknown is separate)
+- Delivery Predictability: 1 Red / 4 Amber / 23 Green / 0 Unknown.
+- Release Quality: 1 Red / 3 Amber / 24 Green / 0 Unknown.
+- Service Stability: 2 Red / 3 Amber / 23 Green / 0 Unknown.
+- Customer Impact: 2 Red / 4 Amber / 22 Green / 0 Unknown.
+- Findings & Action Health: 3 Red / 3 Amber / 22 Green / 0 Unknown.
+- Evidence Traceability: 0 Red / 6 Amber / 21 Green / 1 Unknown.
+
+Overall engagement rating basis
+- ENG-001 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-002 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-003 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-004 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-005 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-006 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-007 | Red | Verified Red override in Release Quality.
+- ENG-008 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-009 | Amber | Amber follow-up required in Delivery Predictability.
+- ENG-010 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-011 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-012 | Amber | Amber follow-up required in Findings & Action Health.
+- ENG-013 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-014 | Red | Verified Red override in Delivery Predictability.
+- ENG-015 | Green | All dimensions are Green with no unresolved evidence gap.
+- ENG-016 | Green | All dimensions are Green with no unresolved evidence gap.
+- SRV-001 | Green | All dimensions are Green with no unresolved evidence gap.
+- SRV-002 | Amber | Amber follow-up required in Customer Impact.
+- SRV-003 | Green | All dimensions are Green with no unresolved evidence gap.
+- SRV-004 | Red | Verified Red override in Service Stability.
+- SRV-005 | Green | All dimensions are Green with no unresolved evidence gap.
+- SRV-006 | Amber | Unknown evidence remains in Evidence Traceability; treat as assurance follow-up, not poor performance.
+- SRV-007 | Amber | Amber follow-up required in Service Stability.
+- SRV-008 | Amber | Amber follow-up required in Findings & Action Health.
+- SRV-009 | Red | Verified Red override in Service Stability.
+- SRV-010 | Amber | Amber follow-up required in Customer Impact.
+- SRV-011 | Amber | Amber follow-up required in Delivery Predictability.
+- SRV-012 | Amber | Amber follow-up required in Evidence Traceability.
+
+Rating assumptions
+- Contest-demo assumptions only; these are not industry or contract standards.
+- Delivery predictability: Green >95%; Amber 80–95%; Red <80%.
+- Evidence traceability: Green >95%; Amber 60–95%; Red <60%.
+- SLO compliance: Green >95% with no material breach or assessed penalty; Amber at or below 95% or with an isolated noncritical breach; Red for a critical/repeated breach or material assessed penalty.
+- Failed/rolled-back production releases: Green ≤10%; Amber >10–20%; Red >20%; a verified severity 1 customer-impacting incident is Red.
+- Repeat findings: Green <10%; Amber 10–25%; Red >25%.
+- Overdue actions: Green ≤15%; Amber >15–40%; Red >40%.
+- Findings & action health uses the worse verified result of repeat findings or overdue actions; customer impact uses documented severity/recurrence because no numeric band was supplied.
+- Estimated penalty exposure is shown for review; a verified material assessed penalty is a Red service-stability trigger.
+- Missing, stale, or unverified evidence is Unknown for the affected measure.
+
+Leadership decisions required
+- Confirm that verified Red quality or service signals override superficially healthy milestone reporting.
+- Approve one accountable owner per action and enforce 30/60/90-day checkpoints.
+- Separate evidence quality problems from actual performance decline so interventions stay fair.
+- Use a small, explainable six-dimension scorecard instead of opaque averaging.
+
+Illustrative engagement: ENG-007
+- Synthetic engineering example: milestone predictability remains Green, but verified release failure and defect leakage drive an overall Red assurance position.
+- Delivery predictability: Green at 97%.
+- Release quality: Red at 25% failed or rolled-back production releases with verified defect leakage.
+- Overall: Red because verified quality risk cannot be masked by milestone performance.
+
+Illustrative engagement: SRV-012
+- Synthetic service example: service stability is Green, yet evidence traceability is Amber because only 16 of 25 sampled release-control artifacts are fully traceable.
+- Service stability: Green at 99% SLO compliance with no material breach or penalty.
+- Evidence traceability: Amber at 64% (16 of 25 synthetic sampled releases fully traceable).
+- Overall: Amber because the evidence-control gap is verified even though service performance is stable.
+
+Priority interventions
+- ENG-007: Engineering Manager owns release-risk containment by 2026-11-18; do not allow healthy milestones to override the verified 25% release-failure signal.
+- SRV-012: Service Manager owns traceability correction by 2026-12-12; maintain Green service stability while repairing the evidence-control gap.
+- SRV-004: Service Manager owns immediate escalation for the verified repeated critical SLO breach and estimated penalty exposure.
+- Reduce governance effort by standardizing evidence capture and AI-assisted recommendation review with mandatory human approval.
+
+SLO and penalty evidence
+- SRV-004 includes a synthetic verified critical SLO breach recurring across three periods, with 12,000 illustrative penalty units estimated and none assessed.
+- Penalty units are fictional demonstration values, not real pricing or contract exposure.
+
+Application walkthrough for the integrated three-minute summary
+- Portfolio dashboard -> ENG-007 detail -> SRV-012 detail -> AI recommendation review -> 30/60/90-day action view.
